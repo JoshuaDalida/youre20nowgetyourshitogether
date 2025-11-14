@@ -8,6 +8,13 @@
       "when": 1762977905501,
       "tag": "0000_talented_jetstream",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1763101572730,
+      "tag": "0001_swift_eternity",
+      "breakpoints": true
     }
   ]
 }
