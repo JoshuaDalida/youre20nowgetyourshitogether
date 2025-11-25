@@ -12,9 +12,9 @@
     "@clerk/nextjs": "^6.35.0",
     "@neondatabase/serverless": "^1.0.2",
     "dotenv": "^17.2.3",
-    "drizzle-kit": "^0.31.6",
+    "drizzle-kit": "^0.31.7",
     "drizzle-orm": "^0.44.7",
-    "next": "16.0.2",
+    "next": "^16.0.2",
     "react": "19.2.0",
     "react-dom": "19.2.0"
   },

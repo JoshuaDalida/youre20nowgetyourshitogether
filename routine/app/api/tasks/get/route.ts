@@ -7,8 +7,8 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     console.log(body);
 
-    const { clerk_id } = body;
-
+    const { clerk_id } = body.body;
+    console.log(clerk_id)
     const all_tasks = await db.select()
         .from(tasks)
         .where(eq(tasks.clerk_id, clerk_id));
