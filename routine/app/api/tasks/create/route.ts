@@ -5,13 +5,22 @@ import { eq } from "drizzle-orm";
 
 export async function POST(req: NextRequest){
     const body = await req.json();
-        const {clerkId, name} = body.body;
+        const {clerk_id, task_name} = body.body;
 
-        const all_tasks = await db.select().from(tasks).where(eq(tasks.clerkId, clerkId));
-        
+    try{
+        console.log(clerk_id)
+        console.log(task_name)
 
+        await db.insert(tasks).values({task_name: task_name, clerk_id:clerk_id})
         return NextResponse.json(
-            {status:200},
-            {all_tasks}
+            {message:"task created"},
+            {status:200}
         )
+    }
+    catch(e){
+        return NextResponse.json(
+            {message: "error: " + e},
+            {status: 500}
+        )
+    }
 }

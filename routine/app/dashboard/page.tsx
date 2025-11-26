@@ -1,7 +1,7 @@
-'use client'
 
 import { useUser } from "@clerk/nextjs"
 import { useEffect } from "react";
+import TaskList from "../components/tasks/TaskList";
 
 export default function page(){
     const {isSignedIn, user, isLoaded} = useUser();
@@ -44,5 +44,10 @@ export default function page(){
   }
 
   // Use `user` to access the current user's data
-  return <div>Hello {user.firstName}!</div>
+  return(
+    <div>
+        <p>Hello {user.firstName}!</p>
+        <TaskList/>
+    </div>
+    )
 }

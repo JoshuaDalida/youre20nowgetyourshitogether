@@ -9,7 +9,9 @@ export const users = pgTable("users", {
 });
 
 export const tasks = pgTable("tasks", {
+  task_id: serial("task_id").unique().primaryKey(),
   clerk_id: text("clerk_id").notNull(),
   task_name: text("task_name").notNull(),
   completed: boolean("completed").notNull().default(false),
 });
+

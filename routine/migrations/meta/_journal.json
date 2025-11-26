@@ -15,6 +15,13 @@
       "when": 1763101572730,
       "tag": "0001_swift_eternity",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1764114491275,
+      "tag": "0002_sleepy_kang",
+      "breakpoints": true
     }
   ]
 }
