@@ -1,5 +1,5 @@
 
-export default function Navbar(props){
+export default function Tasks(props){
 
     async function deleteTask() {
     const res = await fetch("/api/tasks/delete", {
@@ -11,7 +11,7 @@ export default function Navbar(props){
             task_name: props.task_name,
         },
         }),
-    });
+    });}
 
     return (
         <div>

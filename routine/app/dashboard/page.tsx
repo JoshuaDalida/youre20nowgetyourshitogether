@@ -1,3 +1,4 @@
+'use client'
 
 import { useUser } from "@clerk/nextjs"
 import { useEffect } from "react";
@@ -12,13 +13,13 @@ export default function page(){
         try{    
             console.log('trying to check and insert user')
             const res = fetch("/api/create_and_check_user", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                body: {
-                clerkId: user?.id,
-                email: user?.emailAddresses[0].emailAddress,
-                name: user?.fullName,}
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    body: {
+                    clerkId: user?.id,
+                    email: user?.emailAddresses[0].emailAddress,
+                    name: user?.fullName,}
         }),
         });}
          catch(e){

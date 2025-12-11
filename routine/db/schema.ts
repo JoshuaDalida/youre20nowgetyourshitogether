@@ -13,5 +13,6 @@ export const tasks = pgTable("tasks", {
   clerk_id: text("clerk_id").notNull(),
   task_name: text("task_name").notNull(),
   completed: boolean("completed").notNull().default(false),
+  reminder : boolean("reminder").notNull().default(false)
 });
 

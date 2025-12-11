@@ -1,4 +1,3 @@
-import "./styles/tasks.css";
 import { useUser } from "@clerk/nextjs";
 import { useEffect, useState } from "react";
 import Task from './Task'
